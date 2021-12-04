@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang=''>
+<head>
+<meta charset='utf-8'>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+   href= "{{ url_for('static',filename='styles/styles.css')}}">
+</head>
+<body>
+<div id='cssmenu'>
+<ul>
+<li><img  style="height:7vh; padding-right:4px;padding-left:4px;" src="/static/images/icon.jpg" style=""></li>
+<li><label style="height:7vh;padding-right:4px;font-size:28px;font-weight:bold;margin-top:5px;
+padding-top:4px;">Thyroid Classification</label></li>
+  <li><a href="/">Home</a></li>
+  <li><a href="/about">About</a></li>
+  <li class="active"><a href="#">Analyse your test report</a></li>
+</ul>
+</div>
+<p style="font-size:40px;font-weight:bold;">Thyroid Positive or Not.</p>
+<br><p style="font-size:18px;">
+Too much thyroid hormone results in a condition known as hyperthyroidism. Insufficient hormone production leads to hypothyroidism.Although the effects can be unpleasant or uncomfortable, most thyroid problems can be managed well if properly diagnosed and treated. Check below to know HYPERTHYROID OR HYPOTHYROID OR NEGATIVE!</p>
+<center>
+<form method="post" action="predict">
+<table>
+<th style="font-size:19px;">Check out here!</th>
+<tr>
+	
+<td style="font-size:20px;">Age :</td>
+<td><input type="number" class="form-control" name="age" id="age" min="1" max="100" placeholder="(1, 100)" step="any" required=""></td>
+
+</tr>
+<br>
+<tr>
+	
+	
+<td style="font-size:20px;">On Thyroxine :</td>
+<td><input type="number" class="form-control" name="onthyroxine" id="on_thyroxine" min="0" max="1" placeholder="(0, 1)" step="any" required="">
+</td>
+</tr>
+<tr>
+
+<td style="font-size:20px;">TSH value measured:</td>
+<td><input type="number" class="form-control" name="TSH" id="tsh" min="0.005" max="478.0" placeholder="(0.005, 478.0)" step="any" required=""></td>
+
+</tr><br>
+<tr>
+
+	
+
+<td style="font-size:20px;">Query on Hypothyroid :</td>
+<td><input type="number" class="form-control" name="queryhypothyroid" id="query_hypothyroid" min="0" max="1" placeholder="Yes - 1, No - 0" step="any" required=""></td>
+
+</tr><br>
+<tr>
+	
+
+<td style="font-size:20px;">Query on Hyperthyroid :</td>
+<td><input type="number" class="form-control" name="queryhyperthyroid" id="query_hyperthyroid" min="0" max="1" placeholder="Yes - 1, No - 0" step="any" required=""></td>
+</tr><br>
+<tr>
+	
+<td style="font-size:20px;">Free Thyroxine Index (FTI) :</td>
+<td><input type="number" class="form-control" name="FTI" id="fti" min="2.0" max="395.0" placeholder="(2.0, 395.0)" step="any" required=""></td>
+
+</tr>
+<br>
+<tr>
+	
+<td style="font-size:20px;">Physical Symptoms :</td>
+<td><input type="number" class="form-control" name="psych" id="psych" min="0" max="1" placeholder="Yes - 1, No - 0" step="any" required=""></td>
+
+</tr>
+<br>
+<td colspan="2"><center><input style="background-color:#EE731D;color:white;width:70px;height:25px;font-size:17px;" type="submit"  value="Predict"></center></td>
+</tr>
+</table>
+</form>
+</center>
+
+</body>
+</html>
